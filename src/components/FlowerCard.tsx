@@ -1,14 +1,22 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { memo } from 'react';
 import { Flower } from '@/data/flowers';
 
+/**
+ * FlowerCard 组件
+ * 
+ * 用于展示花卉信息的卡片组件，包含图片、名称、描述、价格和分类信息
+ * 点击卡片可跳转到花卉详情页
+ */
 interface FlowerCardProps {
   flower: Flower;
+  className?: string;
 }
 
-export default function FlowerCard({ flower }: FlowerCardProps) {
+const FlowerCard = memo(({ flower, className = '' }: FlowerCardProps) => {
   return (
-    <Link href={`/flowers/${flower.id}`} className="group">
+    <Link href={`/flowers/${flower.id}`} className={`group ${className}`}>
       <div className="overflow-hidden rounded-lg shadow-md transition-all duration-300 hover:shadow-xl bg-white dark:bg-gray-800">
         <div className="relative h-64 w-full overflow-hidden">
           <div className="absolute inset-0 bg-gray-200 dark:bg-gray-700">
@@ -35,4 +43,8 @@ export default function FlowerCard({ flower }: FlowerCardProps) {
       </div>
     </Link>
   );
-} 
+});
+
+FlowerCard.displayName = 'FlowerCard';
+
+export default FlowerCard; 

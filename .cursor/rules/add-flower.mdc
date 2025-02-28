@@ -4,5 +4,5 @@ globs:
 alwaysApply: false
 ---
 1. 根据花的名称，生成一张花的近景特写，prompt 使用英文
-2. 在 src/data/flowers/flowerBasics.ts 文件中新增一种花的配置
-3. 在 src/data/flowers/flowerDetails.ts 文件中新增一种花的详情配置
+2. 在 [flowerBasics.ts](mdc:src/data/flowers/flowerBasics.ts) 文件中新增一种花的配置
+3. 在 [flowerDetails.ts](mdc:src/data/flowers/flowerDetails.ts) 文件中新增一种花的详情配置

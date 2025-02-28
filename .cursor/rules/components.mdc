@@ -1,0 +1,10 @@
+---
+description: 通用组件规范(src/block下)
+globs: src/components/*.tsx
+alwaysApply: false
+---
+## 组件规范
+
+1. 需要在组件头部添加注释，描述组件功能
+2. 需要有 className 属性，传入根元素
+3. 使用 memo 包裹组件，避免不必要的渲染

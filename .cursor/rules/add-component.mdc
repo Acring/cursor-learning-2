@@ -1,0 +1,8 @@
+---
+description: 当用户想要添加一个组件时，遵循下面规则
+globs: 
+alwaysApply: false
+---
+
+1. 在 src/components 下面创建组件
+2. 获取 [other-components.mdc](mdc:.cursor/rules/other-components.mdc) 中规范并遵循
